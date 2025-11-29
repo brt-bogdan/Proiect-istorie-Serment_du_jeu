@@ -61,116 +61,61 @@
       color: white;
     }
 
-    .painting-container {
+    .welcome-text {
       max-width: 900px;
       background: rgba(0, 0, 0, 0.65);
       margin: 50px auto;
       padding: 40px;
       border-radius: 15px;
       box-shadow: 0 0 25px rgba(0,0,0,0.8);
-      text-align: center;
+      font-size: 1.2rem;
+      line-height: 1.7;
+      text-align: left;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
     }
 
-    .painting-title {
+    .event-title {
       color: #FFD700;
+      text-align: center;
       font-size: 2.5rem;
-      margin-bottom: 10px;
+      margin-bottom: 30px;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
 
-    .painting-subtitle {
-      color: #FFA726;
-      font-size: 1.3rem;
-      margin-bottom: 30px;
-      font-style: italic;
-    }
-
-    .painting-frame {
-      border: 20px solid #5D4037;
-      background: #5D4037;
-      border-radius: 8px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-      max-width: 700px;
-      margin: 30px auto;
-      position: relative;
-    }
-
-    .painting-image {
-      width: 100%;
-      height: auto;
-      display: block;
-      border: 2px solid #3E2723;
-    }
-
-    .image-placeholder {
-      width: 100%;
-      height: 400px;
-      background: rgba(0,0,0,0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #FFA726;
-      font-size: 1.2rem;
-      border: 2px dashed #FFA726;
-    }
-
-    .painting-details {
+    .event-section {
       background: rgba(139, 69, 19, 0.85);
       padding: 30px;
       border-radius: 12px;
-      text-align: left;
-      margin-top: 30px;
+      margin: 30px 0;
       border: 2px solid #D7CCC8;
-    }
-
-    .details-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin: 25px 0;
-    }
-
-    .detail-card {
-      background: rgba(0,0,0,0.4);
-      padding: 15px;
-      border-radius: 8px;
-      border-left: 4px solid #FFD700;
-    }
-
-    .detail-label {
-      color: #FFD700;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-
-    .description-section {
-      background: rgba(121, 85, 72, 0.8);
-      padding: 25px;
-      border-radius: 10px;
-      margin-top: 25px;
-      border: 1px solid #BCAAA4;
     }
 
     .section-title {
       color: #FFD700;
-      text-align: center;
       margin-bottom: 20px;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
+      text-align: center;
     }
 
-    .historical-context {
-      background: rgba(78, 52, 46, 0.8);
-      padding: 25px;
-      border-radius: 10px;
-      margin-top: 25px;
+    .event-image {
+      max-width: 600px;
+      margin: 30px auto;
+      text-align: center;
     }
 
-    .artist-info {
-      background: rgba(93, 64, 55, 0.8);
-      padding: 25px;
-      border-radius: 10px;
-      margin-top: 25px;
-      border: 1px solid #8D6E63;
+    .painting-frame {
+      border: 15px solid #5D4037;
+      background: #5D4037;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      display: inline-block;
+    }
+
+    .painting-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border: 2px solid #3E2723;
     }
 
     /* Responsive */
@@ -189,39 +134,23 @@
         padding: 12px 15px;
         font-size: 0.9rem;
       }
-      .painting-container {
+      .welcome-text {
+        font-size: 1rem;
         padding: 25px 20px;
         margin: 30px auto;
       }
-      .painting-title {
+      .event-title {
         font-size: 2rem;
-      }
-      .painting-frame {
-        border-width: 10px;
-      }
-      .details-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .painting-title {
-        font-size: 1.8rem;
-      }
-      .painting-subtitle {
-        font-size: 1.1rem;
       }
     }
   </style>
 </head>
 <body>
   <h1 id="myHeader">
-    <a href="index.html" style="color: white; text-decoration: none;">Tablou Istoric</a>
+    <a href="index.html" style="color: white; text-decoration: none;">Evenimente Istorice</a>
   </h1>
 
-  <nav id="menu">
-    <ul>
-       <nav id="menu">
+   <nav id="menu">
     <ul>
       <li><a href="index.html">Acasă</a></li>
       <li><a href="tablouri.html">Jacques-Louis și alte tablouri</a></li>
@@ -229,12 +158,37 @@
     </ul>
   </nav>
 
-     
-    </ul>
-        <div class="painting-frame">
-      <img src="Serment_du_Jeu_de_Paume_-_Jacques-Louis_David.jpg" alt="Jurământul pe terenul de jeu de Jacques-Louis David" class="painting-image" onerror="this.style.display='none'; document.getElementById('placeholder').style.display='flex';">
-      <div id="placeholder" class="image-placeholder" style="display: none;">
-        Imaginea nu este disponibilă. Verifică calea fișierului.
+
+  <div class="welcome-text">
+    <h1 class="event-title">Jurământul din Sala Jeu de Paume</h1>
+    
+    <div class="event-image">
+      <div class="painting-frame">
+        <img src="Serment_du_Jeu_de_Paume_-_Jacques-Louis_David.jpg" 
+             alt="Jurământul pe terenul de jeu - Jacques-Louis David" 
+             class="painting-image">
       </div>
     </div>
-  </nav>
+
+    <div class="event-section">
+      <h2 class="section-title">Analiza Artistică a Tabloului</h2>
+      <p><strong>Jacques-Louis David (1748-1825)</strong> a fost mult mai mult decât un simplu pictor, el a fost cronicarul vizual și propagandistul genial al unei epoci revoluționare. Ca principal maestru al neoclasicismului, și-a orientat arta spre o misiune moralizatoare și politică, transformând evenimentele contemporane în opere cu reverberații istorice echivalente unor manifeste. Tabloul său emblematic, „Jurământul pe terenul de tenis” (1789), este probabil cea mai fidelă ilustrare a acestei viziuni. Lucrarea comemorează momentul foundational al Revoluției Franceze, când deputațile celor Trei Stări, întrunit în sala de sport a Palatului Versailles, au făcut jurământul solemn de a nu se dispersa până când Franța va fi dotată cu o Constituție. David a ales să immortalizeze acest act de voință colectivă într-o compoziție amplă, orizontală, care ghidează privirea cu fermitate spre centrul dramatic. Aici, figura lui Jean-Sylvain Bailly, ridicată ușor deasupra mulțimii, cu brațul întins spre cer, devine punctul focal și simbolic al întregii scene.</p>
+
+      <p>În jurul acestui nucleu, artistul a orchestrat o mulțime efervescentă de personaje. În prim-plan, numeroși bărbați în costume secolului al XVIII-lea – purtând peruci pudrate, fracuri și robe clericale – exprimă prin gesturi variate întreaga gamă a emoțiilor colective: de la entuziasmul celor care ridică brațele în jur, la solemnitatea celor care semnează documentul, până la îmbrățișările pline de convingere. Această diversitate de posturi și expresii creează o dinamică incredibil de vie. Pe margini și în fundal, o adunătură compactă de deputați, cu brațele ridicate în unison, generează un puternic impuls colectiv, sugerând participarea unitară a întregii săli la acest act istoric. Spațiul în sine joacă un rol semnificativ: sala este vastă, cu pereți înalți și simpli, ceea ce subliniază caracterul improvizat și solemn al locației. Ferestrele înalte de pe laterale dezvăluie straturi suplimentare de public, persoane care privesc spre interior sau flutură pălării, extinzând dincolo de ziduri atmosfera de efervescență generalizată. Un detaliu dinamic crucial îl reprezintă draperiile albe de la ferestre, agitate viguros de un curent de aer. Acest element nu este decorativ, ci profund simbolic, sugerând un vânt al schimbării, un suflu istoric care bântuie acest moment de cumpănă.</p>
+
+      <p>Lumina, tratată cu măiestrie, modelează profund sensul scenei. O lumină puternică și difuză, asemenea unei spotlights divine, cade asupra grupului central și a figurii lui Bailly, transformând momentul politic într-o adevărată scenă a istoriei, cu eroi iluminați. Restul încăperii este luminat mai uniform, în timp ce fundalul rămâne parțial în penumbră, o tehnică specifică lui David de a izola și evidenția acțiunea principală. În ansamblu, atmosfera pe care artistul o creează este una de unitate indestructibilă, exaltare și hotărâre colectivă. Mișcarea este omniprezentă, iar totul conspiră pentru a transmite senzația unui moment istoric ireversibil. „Jurământul pe terenul de tenis” este, așadar, celebrarea picturală a ideii de suveranitate populară. Prin modul în care înfățișează deputații uniți într-un singur jurământ, tabloul devine o declarație vizuală puternică despre nașterea unei națiuni prin voința comună, întruchipând idealurile de libertate, egalitate și fraternitate care au pus bazele unei noi ere. Opera lui David rămâne o mărturie eternă a puterii artei de a immortaliza și defini spiritul unei epoci.</p>
+    </div>
+
+    <div class="event-section">
+      <h2 class="section-title">Contextul Istoric al Evenimentului</h2>
+      <p><strong>Tabloul lui Jacques-Louis David</strong> immortalizează unul dintre cele mai dramatice și fondatoare episoade ale Revoluției Franceze: Jurământul din Sala Jeu de Paume, din 20 iunie 1789. În această compoziție, artistul surprinde clipa de intensă solemnitate în care deputații Stării a Treia (Tiers État), alături de câțiva membri solidari ai clerului și nobilimii, își ridică mâinile într-un gest colectiv de jurământ, făgăduind să nu se despartă până când Franța nu va fi dotată cu o constituție.</p>
+
+      <p>Acest moment emblematic a fost punctul de fierbere al unei crize politice și economice profunde. În 1789, Franța, zdrobită de datorii și inegalități sociale, era condusă de Regele Ludovic al XVI-lea, care a convocat Stările Generale – o adunare medievală divizată în trei ordine sociale: Primul Stament (Clerul), Al Doilea Stament (Nobilimea) și Starea a Treia, care reprezenta aproximativ 98% din populație, dar era constant marginalizată.</p>
+
+      <p>Conflictul a izbucnit în jurul unei cereri simple, dar revoluționare, din partea Stării a Treia: să se voteze pe cap de locuitor, nu pe stări, ceea ce le-ar fi acordat o majoritate decisivă. Înfruntând refuzul ferm al celorlalte două stări, deputații Stării a Treia au acționat cu o îndrăzneală fără precedent. Pe 17 iunie, și-au asumat autoritatea suverană declarându-se „Adunare Națională”, declarând astfel că legitimitatea provine din popor, nu din monarhie.</p>
+
+      <p>Criza și-a atins apogeul pe 20 iunie, când deputații și-au găsit sala de ședințe încuiată și păzită de soldați – un gest clar al regelui de a suprima această nouă adunare. Văzând acest act ca o încercare de a le înlătura vocea, cei 576 de deputați, conduși de Jean-Sylvain Bailly, s-au regrupat într-o sală de sport pentru jocul de tenis acoperit (Jeu de Paume). În acest cadru improvizat, au rostit jurământul istoric de a nu se dispersa până când voința națională nu va fi consacrată într-un document constituțional, punând astfel bazele juridice și simbolice ale Franței moderne.</p>
+    </div>
+  </div>
+</body>
+</html>

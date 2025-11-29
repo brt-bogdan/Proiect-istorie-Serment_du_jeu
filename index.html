@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('fundal-istoric.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #myHeader {
+      background-color: #8B4513d9;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      width: 100%;
+      font-weight: 700;
+      font-size: 3rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      user-select: none;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      background-color: rgba(242, 242, 242, 0.95);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      display: block;
+      padding: 15px 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border-radius: 6px;
+    }
+
+    nav ul li a:hover {
+      background-color: #8B4513d9;
+      color: white;
+    }
+
+    .welcome-text {
+      max-width: 1000px;
+      background: rgba(0, 0, 0, 0.65);
+      margin: 50px auto;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.8);
+      font-size: 1.2rem;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .painting-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .painting-frame {
+      border: 20px solid #5D4037;
+      background: #5D4037;
+      border-radius: 8px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .painting-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 2px solid #3E2723;
+    }
+
+    .painting-info {
+      background: rgba(139, 69, 19, 0.85);
+      padding: 30px;
+      border-radius: 12px;
+      text-align: left;
+      max-width: 700px;
+      border: 2px solid #D7CCC8;
+    }
+
+    .painting-title {
+      color: #FFD700;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .painting-subtitle {
+      color: #FFA726;
+      font-size: 1.4rem;
+      text-align: center;
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 25px 0;
+    }
+
+    .detail-card {
+      background: rgba(0,0,0,0.4);
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid #FFD700;
+    }
+
+    .detail-label {
+      color: #FFD700;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .historical-context {
+      background: rgba(121, 85, 72, 0.8);
+      padding: 25px;
+      border-radius: 10px;
+      margin-top: 30px;
+      border: 1px solid #BCAAA4;
+    }
+
+    .context-title {
+      color: #FFD700;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+    }
+
+    .significance-section {
+      background: rgba(78, 52, 46, 0.8);
+      padding: 25px;
+      border-radius: 10px;
+      margin-top: 25px;
+    }
+
+    .significance-title {
+      color: #FFA726;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      #myHeader {
+        font-size: 2rem;
+        padding: 40px 15px;
+      }
+      nav ul {
+        flex-wrap: wrap;
+      }
+      nav ul li {
+        margin: 5px;
+      }
+      nav ul li a {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+      }
+      .welcome-text {
+        font-size: 1rem;
+        padding: 25px 20px;
+      }
+      .painting-frame {
+        border-width: 10px;
+      }
+      .details-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .painting-title {
+        font-size: 1.8rem;
+      }
+      .painting-subtitle {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 id="myHeader">
+    <a href="index.html" style="color: white; text-decoration: none;">Galerie Istorică</a>
+  </h1>
+
+  <nav id="menu">
+    <ul>
+      <li><a href="index.html">Acasă</a></li>
+      <li><a href="tablouri.html">Tablouri</a></li>
+      <li><a href="evenimente.html">Evenimente</a></li>
+      <li><a href="epoci.html">Epoci Istorice</a></li>
+      <li><a href="contact1.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="welcome-text">
+    <div class="painting-hero">
+      <h1 class="painting-title">Numele Tabloului</h1>
+      <h2 class="painting-subtitle">Eveniment Istoric - Secolul XVIII</h2>
+      
+      <div class="painting-frame">
+        <img src="imagini/tablou-istoric.jpg" alt="Tablou eveniment istoric secolul XVIII" class="painting-image">
+      </div>
+
+      <div class="painting-info">
+        <div class="details-grid">
+          <div class="detail-card">
+            <span class="detail-label">Artist:</span><br>
+            Numele Artistului
+          </div>
+          <div class="detail-card">
+            <span class="detail-label">Anul:</span><br>
+            17XX
+          </div>
+          <div class="detail-card">
+            <span class="detail-label">Tehnică:</span><br>
+            Ulei pe pânză
+          </div>
+          <div class="detail-card">
+            <span class="detail-label">Dimensiuni:</span><br>
+            XXX × XXX cm
+          </div>
+          <div class="detail-card">
+            <span class="detail-label">Locație:</span><br>
+            Muzeul/O colecție
+          </div>
+          <div class="detail-card">
+            <span class="detail-label">Curent artistic:</span><br>
+            Curentul artistic
+          </div>
+        </div>
+
+        <div class="historical-context">
+          <h3 class="context-title">Context Istoric</h3>
+          <p>Descrierea evenimentului istoric reprezentat în tablou, contextul social-politic al perioadei și semnificația sa în istoria secolului XVIII.</p>
+        </div>
+
+        <div class="significance-section">
+          <h3 class="significance-title">Semnificația Artistică</h3>
+          <p>Analiza compoziției, simbolurilor și tehnicilor folosite de artist pentru a reda evenimentul istoric.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -103,18 +102,6 @@
       border: 2px solid #3E2723;
     }
 
-    .image-placeholder {
-      width: 100%;
-      height: 400px;
-      background: rgba(0,0,0,0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #FFA726;
-      font-size: 1.2rem;
-      border: 2px dashed #FFA726;
-    }
-
     .painting-details {
       background: rgba(139, 69, 19, 0.85);
       padding: 30px;
@@ -144,12 +131,12 @@
       font-size: 1.1rem;
     }
 
-    .description-section {
-      background: rgba(121, 85, 72, 0.8);
+    .artist-info {
+      background: rgba(93, 64, 55, 0.8);
       padding: 25px;
       border-radius: 10px;
       margin-top: 25px;
-      border: 1px solid #BCAAA4;
+      border: 1px solid #8D6E63;
     }
 
     .section-title {
@@ -159,19 +146,35 @@
       font-size: 1.4rem;
     }
 
-    .historical-context {
+    .other-paintings {
       background: rgba(78, 52, 46, 0.8);
       padding: 25px;
       border-radius: 10px;
       margin-top: 25px;
     }
 
-    .artist-info {
-      background: rgba(93, 64, 55, 0.8);
-      padding: 25px;
-      border-radius: 10px;
-      margin-top: 25px;
-      border: 1px solid #8D6E63;
+    .painting-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .gallery-item {
+      text-align: center;
+    }
+
+    .gallery-image {
+      width: 100%;
+      height: 150px;
+      background: #5D4037;
+      border: 2px solid #FFD700;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFA726;
+      margin-bottom: 10px;
     }
 
     /* Responsive */
@@ -204,40 +207,27 @@
         grid-template-columns: 1fr;
       }
     }
-
-    @media (max-width: 480px) {
-      .painting-title {
-        font-size: 1.8rem;
-      }
-      .painting-subtitle {
-        font-size: 1.1rem;
-      }
-    }
   </style>
 </head>
 <body>
   <h1 id="myHeader">
-    <a href="index.html" style="color: white; text-decoration: none;">Tablou Istoric</a>
+    <a href="index.html" style="color: white; text-decoration: none;">Jacques-Louis</a>
   </h1>
 
-  <nav id="menu">
+ <nav id="menu">
     <ul>
       <li><a href="index.html">Acasă</a></li>
-      <li><a href="tablouri.html">Tablouri</a></li>
-      <li><a href="evenimente.html">Descrierea Tabloului</a></li>
-      
+      <li><a href="tablouri.html">Jacques-Louis și alte tablouri</a></li>
+      <li><a href="evenimente.html">Jurământul pe teren de tenis</a></li>
     </ul>
   </nav>
 
   <div class="painting-container">
     <h1 class="painting-title">Jurământul pe terenul de tenis</h1>
-    <h2 class="painting-subtitle">Serment du Jeu de Paume </h2>
+    <h2 class="painting-subtitle">Serment du Jeu de Paume - 1789</h2>
     
     <div class="painting-frame">
-      <img src="Serment_du_Jeu_de_Paume_-_Jacques-Louis_David.jpg" alt="Jurământul pe terenul de jeu de Jacques-Louis David" class="painting-image" onerror="this.style.display='none'; document.getElementById('placeholder').style.display='flex';">
-      <div id="placeholder" class="image-placeholder" style="display: none;">
-        Imaginea nu este disponibilă. Verifică calea fișierului.
-      </div>
+      <img src="imagini/Serment_du_Jeu_de_Paume_-_Jacques-Louis_David.jpg" alt="Jurământul pe terenul de jeu de Jacques-Louis David" class="painting-image">
     </div>
 
     <div class="painting-details">
@@ -248,7 +238,7 @@
         </div>
         <div class="detail-card">
           <span class="detail-label">Anul:</span><br>
-          1789-1791
+          1791
         </div>
         <div class="detail-card">
           <span class="detail-label">Tehnică:</span><br>
@@ -260,7 +250,7 @@
         </div>
         <div class="detail-card">
           <span class="detail-label">Locație:</span><br>
-          Palatul de la Versailles 
+          Musée National du Château, Versailles
         </div>
         <div class="detail-card">
           <span class="detail-label">Curent artistic:</span><br>
@@ -268,30 +258,54 @@
         </div>
       </div>
 
-      <div class="artist-info">
+       <div class="artist-info">
         <h3 class="section-title">Despre Artist</h3>
-        <p><strong>Jacques-Louis David</strong> (1748-1825) a fost pictorul oficial al Franței revoluționare și apoi al lui Napoleon. Considerat părintele Neoclasicismului, el a respins frivolitatea Rococo-ului, optând pentru compoziții severe, cu linii precise și teme morale.Capodopere precum "Jurământul pe terenul de tenis" au devenit simboluri ale patriotismului, iar "Moartea lui Marat" este o emblemă a Revoluției.</p>
+        <p><strong>Jacques-Louis David (1748-1825)</strong> a fost pictorul emblematic al Revoluției Franceze și al erei napoleoniene, un maestru al neoclasicismului. Opera sa a abandonat frivolitatea Rococoului, adoptând în schimb un stil sever, moralizator, inspirat din Antichitatea clasică, pentru a servi ideologii politice.</p>
+        
+        <p>A devenit cunoscut prin tablouri precum „Jurământul de la Sala de Scrimă” (1784), care a transformat un subiect istoric într-un manifest revoluționar, glorificând virtutea civică. A servit Republica, pictând martirii săi, cum ar fi în „Moartea lui Marat” (1793), o operă de o putere tragică și simplitate cutremurătoare.</p>
+        
+        <p>Devenit pictorul oficial al lui Napoleon, David l-a glorificat în lucrări monumentale precum „Încoronarea lui Napoleon” (1805-1807), înregistrând cu măreție ceremonială puterea noului împărat. Stilul său precis, compozițiile teatrale și studiul gesturilor simbolice au definit imaginea puterii pentru o epocă întreagă. Prin atelierul său, David a influențat profund generații de pictori, rămânând unul dintre cei mai importanti artiști europeni.</p>
       </div>
 
-      <div class="description-section">
-        <h3 class="section-title">Descrierea Tabloului</h3>
-        <p>
-      </div>
-
+  <div class="other-paintings">
+    <h3 class="section-title">Alte Lucrări Importante</h3>
+    <div class="painting-gallery">
+        <div class="gallery-item">
+            <div class="painting-frame">
+                <img src="imagini/Le_Serment_des_Horaces_-_Jacques-Louis_David_.jpg" alt="Jurământul Horatiilor" class="painting-image">
+            </div>
+            <div class="painting-info">
+                <strong>Jurământul Horatiilor</strong><br>
+                <em>1784</em>
+            </div>
+        </div>
+        
+        <div class="gallery-item">
+            <div class="painting-frame">
+                <img src="imagini/Jacques-Louis_David_-_Marat_assassinate.jpg" alt="Moartea lui Marat" class="painting-image">
+            </div>
+            <div class="painting-info">
+                <strong>Moartea lui Marat</strong><br>
+                <em>1793</em>
+            </div>
+        </div>
+        
+        <div class="gallery-item">
+            <div class="painting-frame">
+                <img src="imagini/Le_Sacre_de_Napoléon_-_Jacques-Louis_David.jpg" alt="Încoronarea lui Napoleon" class="painting-image">
+            </div>
+            <div class="painting-info">
+                <strong>Încoronarea lui Napoleon</strong><br>
+                <em>1805-1807</em>
+            </div>
+        </div>
+    </div>
+</div>
      
-
-  <script>
-    // Verifică dacă imaginea s-a încărcat corect
-    window.addEventListener('load', function() {
-      const img = document.querySelector('.painting-image');
-      const placeholder = document.getElementById('placeholder');
-      
-      if (img && img.naturalWidth === 0) {
-        img.style.display = 'none';
-        placeholder.style.display = 'flex';
-      }
-    });
-  </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
-
